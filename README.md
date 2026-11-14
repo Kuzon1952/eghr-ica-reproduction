@@ -25,9 +25,28 @@ The absolute correlation between each source and each output:
 
 Each source is recovered by exactly one output.
 
+## Figures
+
+Sources, mixed inputs and recovered outputs. Each output matches one
+source up to a sign flip, which the paper counts as a valid solution:
+
+![Signals](fig1_signals.png)
+
+Network outputs before and after learning:
+
+![Outputs](fig2_outputs.png)
+
+Separation error during learning:
+
+![Learning curve](fig3_learning_curve.png)
+
+To regenerate the figures:
+
+    uv run plots.py
+
 ## Status
 
-Work in progress: experiments and plots will be added.
+Work in progress: more experiments will be added.
 
 ## Author
 
