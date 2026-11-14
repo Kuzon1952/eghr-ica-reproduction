@@ -46,7 +46,13 @@ To regenerate the figures:
 
 ## Status
 
-Work in progress: more experiments will be added.
+Done:
+- Reproduction of equation 1 for two Laplace sources
+- Plots of signals, outputs and the learning curve
+
+Planned:
+- Comparison with a standard ICA method (FastICA)
+- Tests with more sources and different mixing matrices
 
 ## Author
 
