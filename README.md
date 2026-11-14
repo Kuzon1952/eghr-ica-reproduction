@@ -47,10 +47,20 @@ the worst-conditioned mixtures and had not converged yet:
 
 ![Comparison](fig4_comparison.png)
 
+Learning time against the difficulty of the mixture. Mixing matrices were
+built with an exact condition number (1 to 32), and each was trained 10 times
+from random starting weights. From condition number 4 upwards, the number of
+samples needed to reach an error of 0.001 roughly doubles when the condition
+number doubles. At condition number 64 the same step size became unstable,
+so harder mixtures also need a smaller step size:
+
+![Learning time](fig5_learning_time.png)
+
 To regenerate the figures:
 
     uv run plots.py
     uv run compare.py
+    uv run learning_time.py
 
 ## Status
 
@@ -58,10 +68,11 @@ Done:
 - Reproduction of equation 1 for two Laplace sources
 - Plots of signals, outputs and the learning curve
 - Comparison with a standard ICA method (FastICA)
+- Learning time against the condition number of the mixing matrix
 
 Planned:
-- How learning time depends on the condition number of the mixing matrix
 - Tests with more than two sources
+- A step size that adapts to the scale of the input
 
 ## Author
 
