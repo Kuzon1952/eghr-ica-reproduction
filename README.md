@@ -40,19 +40,28 @@ Separation error during learning:
 
 ![Learning curve](fig3_learning_curve.png)
 
+Comparison with FastICA over 20 random mixing matrices (2 million samples
+each). FastICA is more accurate in every trial. The local rule reaches an
+error below 0.01 in 17 of 20 trials; the three remaining trials are among
+the worst-conditioned mixtures and had not converged yet:
+
+![Comparison](fig4_comparison.png)
+
 To regenerate the figures:
 
     uv run plots.py
+    uv run compare.py
 
 ## Status
 
 Done:
 - Reproduction of equation 1 for two Laplace sources
 - Plots of signals, outputs and the learning curve
+- Comparison with a standard ICA method (FastICA)
 
 Planned:
-- Comparison with a standard ICA method (FastICA)
-- Tests with more sources and different mixing matrices
+- How learning time depends on the condition number of the mixing matrix
+- Tests with more than two sources
 
 ## Author
 
